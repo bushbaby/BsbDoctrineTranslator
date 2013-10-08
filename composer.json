@@ -20,7 +20,10 @@
     "autoload": {
         "files": ["src/functions.php"],
         "psr-0": {
-            "BsbDoctrineTranslator\\": "src/"
-        }
+            "BsbDoctrineTranslator": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
     }
 }
