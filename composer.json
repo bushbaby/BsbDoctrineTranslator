@@ -1,0 +1,26 @@
+{
+    "name": "bushbaby/bsb-doctrine-translator",
+    "description": "BsbDoctrineTranslator is a ZF2 module that provides tools to manage translations stored with doctrine.",
+    "type": "library",
+    "keywords": ["zf2", "translation", "i18n", "module", "doctrine"],
+    "homepage": "https://github.com/bushbaby/BsbDoctrineTranslator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bas Kamer",
+            "homepage": "http://bushbaby.nl"
+        }
+    ],
+    "require": {
+        "php":                               ">=5.3.3",
+        "doctrine/doctrine-orm-module":      "0.8.*",
+        "pear/Console_Table": "*",
+        "nikic/php-parser": "*"
+    },
+    "autoload": {
+        "files": ["src/functions.php"],
+        "psr-0": {
+            "BsbDoctrineTranslator\\": "src/"
+        }
+    }
+}
