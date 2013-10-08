@@ -10,8 +10,6 @@ use Zend\I18n\Translator\Translator;
 use Zend\View\Renderer\PhpRenderer;
 use Zend\View\Resolver\AggregateResolver;
 
-include_once 'src/functions.php';
-
 class Module
 {
 
