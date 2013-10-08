@@ -15,7 +15,7 @@ class ManagerFactory implements FactoryInterface
     {
         $config     = $serviceLocator->get('config');
         $em         = $serviceLocator->get('Doctrine\ORM\EntityManager');
-        $loader     = $serviceLocator->get('translator')->getPluginManager()->get('bsbdoctrinetranslator');
+        $loader     = $serviceLocator->get('MvcTranslator')->getPluginManager()->get('bsbdoctrinetranslator');
 
         $config     = isset($config['bsbdoctrinetranslator']['manager']) ? $config['bsbdoctrinetranslator']['manager'] : array();
 

@@ -27,7 +27,7 @@ class DoctrineLoaderFactory implements FactoryInterface
 
         $service = new DoctrineTranslationLoader($em);
 
-        $translator = $sm->get('translator');
+        $translator = $sm->get('MvcTranslator');
         $translator->getEventManager()->attachAggregate(new TranslatorListener($em, $fs));
 
         $translator->enableEventManager();

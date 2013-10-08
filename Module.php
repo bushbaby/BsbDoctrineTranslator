@@ -26,7 +26,7 @@ class Module
     public function configureTranslator($sm)
     {
         /** @var Translator $translator */
-        $translator = $sm->get('translator');
+        $translator = $sm->get('MvcTranslator');
 
         $config = $sm->get('config');
 
