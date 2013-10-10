@@ -17,6 +17,9 @@ Hooks in to the regular translator.
 
 ### LocalizedTemplatePathStackResolver
 
+### Controller Plugin
+
+Adds a translate and translatePlural controller plugin which proxies to the MvcTranslator instance
 
 ### Commandline Tool
 

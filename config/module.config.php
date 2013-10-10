@@ -7,6 +7,12 @@ return array(
             'BsbDoctrineTranslator\Controller\ScannerController' => 'BsbDoctrineTranslator\Controller\ScannerController',
         ),
     ),
+    'controller_plugins' => array(
+        'factories' => array(
+            'translate'       => 'BsbDoctrineTranslator\Controller\Plugin\TranslatorFactory',
+            'translatePlural' => 'BsbDoctrineTranslator\Controller\Plugin\TranslatorPluralFactory',
+        ),
+    ),
     'doctrine' => array(
         'driver' => array(
             'bsbdoctrinetranslator_annotation_driver' => array(
