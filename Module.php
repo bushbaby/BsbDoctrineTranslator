@@ -30,7 +30,7 @@ class Module
 
         $config = $sm->get('config');
 
-        foreach($config['bsbdoctrinetranslator']['manager']['text_domains'] as $text_domain) {
+        foreach($config['bsb_doctrine_translator']['manager']['text_domains'] as $text_domain) {
             $translator->addRemoteTranslations('BsbDoctrineTranslator', $text_domain);
         }
 
