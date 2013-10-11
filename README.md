@@ -45,10 +45,6 @@ Hooks in to the regular translator.
 
 An resolver able to load templates based on the active locale (not the best solution)
 
-### Controller Plugin
-
-Adds a translate and translatePlural controller plugin which proxies to the MvcTranslator instance
-
 ### Commandline Tool
 
 #### Commands
