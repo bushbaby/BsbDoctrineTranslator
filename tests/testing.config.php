@@ -17,7 +17,7 @@
  * <http://www.doctrine-project.org>.
  */
 return array(
-    'bsbdoctrinetranslator' => array(
+    'bsb_doctrine_translator' => array(
         'manager' => array(
             'text_domains' => array(
                 'default',

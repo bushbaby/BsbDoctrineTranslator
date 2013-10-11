@@ -15,8 +15,8 @@ class SourceScannerFactory implements FactoryInterface
     {
         $config = $serviceLocator->get('config');
 
-        $paths = $config['bsbdoctrinetranslator']['manager']['source_paths'] ?: array();
-        $extensions = $config['bsbdoctrinetranslator']['manager']['source_file_extensions'] ?: array();
+        $paths = $config['bsb_doctrine_translator']['manager']['source_paths'] ?: array();
+        $extensions = $config['bsb_doctrine_translator']['manager']['source_file_extensions'] ?: array();
         $config = array(
             'paths' => $paths,
             'extensions' => $extensions,

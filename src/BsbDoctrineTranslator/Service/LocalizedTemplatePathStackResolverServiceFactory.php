@@ -33,8 +33,8 @@ class LocalizedTemplatePathStackResolverServiceFactory implements FactoryInterfa
 
         $config            = $serviceLocator->get('config');
 
-        if (is_array($config) && isset($config['bsbdoctrinetranslator']['localized_template_path_stack'])) {
-            $config = $config['bsbdoctrinetranslator']['localized_template_path_stack'];
+        if (is_array($config) && isset($config['bsb_doctrine_translator']['localized_template_path_stack'])) {
+            $config = $config['bsb_doctrine_translator']['localized_template_path_stack'];
             if (is_array($config)) {
                 if (isset($config['fallback_locale'])) {
                     $templatePathStack->setFallbackLocale($config['fallback_locale']);

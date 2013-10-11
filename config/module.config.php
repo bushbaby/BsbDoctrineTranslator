@@ -1,6 +1,18 @@
 <?php
 
 return array(
+    'bsb_doctrine_translator' => array(
+        'manager' => array(
+            'text_domains' => array(
+            ),
+            'source_paths' => array(
+            ),
+            'source_file_extensions' => array(
+            ),
+        ),
+        'localized_template_path_stack' => array(
+        ),
+    ),
     'controllers' => array(
         'invokables' => array(
             'BsbDoctrineTranslator\Controller\CompareController' => 'BsbDoctrineTranslator\Controller\CompareController',
@@ -25,35 +37,6 @@ return array(
                     'BsbDoctrineTranslator\Entity' => 'bsbdoctrinetranslator_annotation_driver'
                 )
             )
-        ),
-    ),
-    'bsbdoctrinetranslator' => array(
-        'manager' => array(
-            'text_domains' => array(
-                'default',
-                'error',
-                'navigation',
-                'footer',
-                'snd-jargon',
-                'snd-auth',
-                'snd-application',
-                'snd-composition',
-                'snd-specialist',
-                'snd-admin',
-                'snd-admin-help',
-                'snd-admin-faq',
-                'snd-admin-documents',
-            ),
-            'source_paths' => array(
-                'module', 'config/autoload'
-            ),
-            'source_file_extensions' => array(
-                'php', 'phtml'
-            ),
-        ),
-        'localized_template_path_stack' => array(
-             'fallback_locale' => 'en_GB',
-             'name_conversion_pattern' => '#DIRNAME#/#FILENAME#/#LOCALE#.#EXTENSION#',
         ),
     ),
 

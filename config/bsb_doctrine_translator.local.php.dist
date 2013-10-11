@@ -1,0 +1,21 @@
+<?php
+
+return array(
+    'bsb_doctrine_translator' => array(
+        'manager' => array(
+            'text_domains' => array(
+                'default',
+            ),
+            'source_paths' => array(
+                'module', 'config/autoload'
+            ),
+            'source_file_extensions' => array(
+                'php', 'phtml'
+            ),
+        ),
+        'localized_template_path_stack' => array(
+             'fallback_locale' => 'en_GB',
+             'name_conversion_pattern' => '#DIRNAME#/#FILENAME#/#LOCALE#.#EXTENSION#',
+        ),
+    ),
+);
