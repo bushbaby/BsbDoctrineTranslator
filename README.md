@@ -7,7 +7,32 @@ Set of tools to manage translation from a database.
 
 ## Installation
 
+### as zf2 project
+
+BsbDoctrineTranslator works with Composer. To install it into your project, just add the following line into your composer.json file:
+
+    "require": {
+        "bushbaby/bsb-doctrine-translator": "*"
+    }
+   
+Then update your project by runnning composer.phar update. 
+
+Finally enable the module by adding BsbDoctrineTranslator in your application.config.php file. 
+
+### as standalone
+
+For development purposes you might want to install BsbDoctrineTranslator standalone. Clone the project somewhere on your computer
+
+    git clone git@github.com:bushbaby/BsbDoctrineTranslator.git BsbDoctrineTranslator
+    cd BsbDoctrineTranslator
+    curl -sS https://getcomposer.org/installer | php
+    composer.phar install
+    phpunit
+    
+
 ## Configuration
+
+To configure the module just copy the bsb_doctrine_translator.local.php.dist (you can find this file in the config folder of BsbDoctrineTranslator) into your config/autoload folder, and override what you want.
 
 ## Components
 
@@ -16,6 +41,8 @@ Set of tools to manage translation from a database.
 Hooks in to the regular translator.
 
 ### LocalizedTemplatePathStackResolver
+
+An resolver able to load templates based on the active locale (not the best solution)
 
 ### Controller Plugin
 
