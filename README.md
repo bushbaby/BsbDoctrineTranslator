@@ -26,7 +26,8 @@ For development purposes you might want to install BsbDoctrineTranslator standal
     git clone git@github.com:bushbaby/BsbDoctrineTranslator.git BsbDoctrineTranslator
     cd BsbDoctrineTranslator
     curl -sS https://getcomposer.org/installer | php
-    composer.phar install
+    git checkout develop
+    ./composer.phar install
     phpunit
     
 
