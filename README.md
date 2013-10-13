@@ -41,10 +41,6 @@ To configure the module just copy the bsb_doctrine_translator.local.php.dist (yo
 
 Hooks in to the regular translator.
 
-### LocalizedTemplatePathStackResolver
-
-An resolver able to load templates based on the active locale (not the best solution)
-
 ### Commandline Tool
 
 #### Commands

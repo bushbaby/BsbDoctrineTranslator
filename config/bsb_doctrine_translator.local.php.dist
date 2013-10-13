@@ -13,9 +13,5 @@ return array(
                 'php', 'phtml'
             ),
         ),
-        'localized_template_path_stack' => array(
-             'fallback_locale' => 'en_GB',
-             'name_conversion_pattern' => '#DIRNAME#/#FILENAME#/#LOCALE#.#EXTENSION#',
-        ),
     ),
 );

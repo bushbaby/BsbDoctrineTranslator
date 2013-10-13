@@ -17,10 +17,6 @@ class Module
     {
         $sm = $e->getApplication()->getServiceManager();
         $this->configureTranslator($sm);
-
-        /** @var AggregateResolver $ar */
-        $ar = $sm->get('ViewResolver');
-        $ar->attach($sm->get('BsbDoctrineTranslator\LocalizedTemplatePathStackResolver'));
     }
 
     public function configureTranslator($sm)
@@ -75,7 +71,6 @@ class Module
             'factories' => array(
                 'BsbDoctrineTranslator\Scanner' => 'BsbDoctrineTranslator\Factory\SourceScannerFactory',
                 'BsbDoctrineTranslator\Manager' => 'BsbDoctrineTranslator\Factory\ManagerFactory',
-                'BsbDoctrineTranslator\LocalizedTemplatePathStackResolver' => 'BsbDoctrineTranslator\Service\LocalizedTemplatePathStackResolverServiceFactory',
             ),
         );
     }

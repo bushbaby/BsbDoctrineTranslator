@@ -10,8 +10,6 @@ return array(
             'source_file_extensions' => array(
             ),
         ),
-        'localized_template_path_stack' => array(
-        ),
     ),
     'controllers' => array(
         'invokables' => array(
