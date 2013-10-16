@@ -3,7 +3,7 @@
 namespace BsbDoctrineTranslator\Manager;
 
 use BsbDoctrineTranslator\Exception\NotManagedException;
-use BsbDoctrineTranslator\I18n\Translator\Loader\DoctrineTranslationLoader;
+use BsbDoctrineTranslationLoader\I18n\Translator\Loader\Doctrine as DoctrineLoader;
 use Doctrine\ORM\EntityManager;
 use Zend\I18n\Translator\Translator;
 use Zend\Stdlib\AbstractOptions;
@@ -16,7 +16,7 @@ class DoctrineTranslatorService extends AbstractOptions {
     protected $entityManager;
 
     /**
-     * @var $loader DoctrineTranslationLoader
+     * @var $loader DoctrineLoader
      */
     protected $loader;
     /**
@@ -40,7 +40,7 @@ class DoctrineTranslatorService extends AbstractOptions {
      */
     protected $source_file_extensions;
 
-    public function __construct(DoctrineTranslationLoader $loader, EntityManager $entityManager, $options = array()) {
+    public function __construct(DoctrineLoader $loader, EntityManager $entityManager, $options = array()) {
         $this->loader    = $loader;
         $this->entityManager = $entityManager;
 
