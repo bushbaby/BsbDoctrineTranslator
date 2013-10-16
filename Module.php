@@ -13,30 +13,6 @@ use Zend\View\Resolver\AggregateResolver;
 class Module
 {
 
-    public function onBootstrap(MvcEvent $e)
-    {
-        $sm = $e->getApplication()->getServiceManager();
-        $this->configureTranslator($sm);
-    }
-
-    public function configureTranslator($sm)
-    {
-        /** @var Translator $translator */
-        $translator = $sm->get('MvcTranslator');
-
-        $config = $sm->get('config');
-
-        foreach($config['bsb_doctrine_translator']['manager']['text_domains'] as $text_domain) {
-            $translator->addRemoteTranslations('BsbDoctrineTranslator', $text_domain);
-        }
-
-        $plugins = $translator->getPluginManager();
-        $plugins->setServiceLocator($sm);
-
-        $config  = new Config($this->getTranslatorConfig());
-        $config->configureServiceManager($plugins);
-    }
-
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
@@ -49,18 +25,6 @@ class Module
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
-            ),
-        );
-    }
-
-    public function getTranslatorConfig()
-    {
-        return array(
-            'aliases' => array(
-                'BsbDoctrineTranslator' => 'BsbDoctrineLoader'
-            ),
-            'factories' => array(
-                'BsbDoctrineLoader' => 'BsbDoctrineTranslator\Factory\DoctrineLoaderFactory',
             ),
         );
     }

@@ -3,7 +3,7 @@ BsbDoctrineTranslator
 
 WARNING! very much work in progress - do not use in production!
 
-Set of tools to manage translation from a database.
+Set of tools to manage translation from a doctrine database.
 
 ## Installation
 
@@ -35,11 +35,6 @@ For development purposes you might want to install BsbDoctrineTranslator standal
 
 To configure the module just copy the bsb_doctrine_translator.local.php.dist (you can find this file in the config folder of BsbDoctrineTranslator) into your config/autoload folder, and override what you want.
 
-## Components
-
-### DoctrineTranslatorLoader
-
-Hooks in to the regular translator.
 
 ### Commandline Tool
 
