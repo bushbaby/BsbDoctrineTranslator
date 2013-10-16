@@ -3,8 +3,6 @@
 return array(
     'bsb_doctrine_translator' => array(
         'manager' => array(
-            'text_domains' => array(
-            ),
             'source_paths' => array(
             ),
             'source_file_extensions' => array(
