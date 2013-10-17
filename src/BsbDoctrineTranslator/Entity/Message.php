@@ -163,7 +163,7 @@ class Message
      */
     public function setOrigin($origin)
     {
-        $this->origin = $origin;
+        $this->origin = is_null($origin) ? null : (array) $origin;
     }
 
     /**
@@ -171,7 +171,7 @@ class Message
      */
     public function getOrigin()
     {
-        return $this->origin;
+        return is_null($this->origin) ? array() : $this->origin;
     }
 
 }

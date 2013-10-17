@@ -209,8 +209,8 @@ class CompareController extends AbstractActionController
         $rows = array(array('id', 'locale_id', 'domain', 'message', 'translation', 'text_domain', 'origin'));
 
         /** @var $Entity \BsbDoctrineTranslator\Entity\Message */
-        foreach($messageRepo->findAll() as $Entity) {
-            $rows[] = array($Entity->getId(), $Entity->getLocale()->getLocale(), $Entity->getDomain(), $Entity->getMessage(), $Entity->getTranslation(), $Entity->getDomain(), $Entity->getOrigin());
+        foreach($messageRepo->findBy(array(), array('message' => 'asc', 'locale' => 'asc', 'domain'=>'asc')) as $Entity) {
+            $rows[] = array($Entity->getId(), $Entity->getLocale()->getLocale(), $Entity->getDomain(), $Entity->getMessage(), $Entity->getTranslation(), $Entity->getDomain(), implode("\n", $Entity->getOrigin()));
         }
 
         $sheet->fromArray($rows);
@@ -288,7 +288,7 @@ class CompareController extends AbstractActionController
                     $Entity->setTranslation($entry[4]);
                 }
                 if (isset($entry[6]) && strlen($entry[6])) {
-                    $Entity->setOrigin($entry[6]);
+                    $Entity->setOrigin(explode("\n", $entry[6]) );
                 } else {
                     $Entity->setOrigin(null);
                 }
