@@ -3,8 +3,6 @@
 return array(
     'bsb_doctrine_translator' => array(
         'manager' => array(
-            'text_domains' => array(
-            ),
             'source_paths' => array(
             ),
             'source_file_extensions' => array(
@@ -26,10 +24,17 @@ return array(
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'BsbDoctrineTranslator\Entity' => 'bsbdoctrinetranslator_annotation_driver'
+                    'BsbDoctrineTranslator\Entity' => 'bsbdoctrinetranslator_annotation_driver',
+                    'BsbDoctrineTranslationLoader\Entity' => 'bsbdoctrinetranslator_annotation_driver'
                 )
             )
         ),
+    ),
+    'bsb_doctrine_translation_loader' => array(
+        'entity_class_map' => array(
+            'locale' => 'BsbDoctrineTranslator\Entity\Locale',
+            'message' => 'BsbDoctrineTranslator\Entity\Message'
+        )
     ),
 
     /**

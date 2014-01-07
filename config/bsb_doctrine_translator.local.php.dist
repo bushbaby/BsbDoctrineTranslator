@@ -3,9 +3,6 @@
 return array(
     'bsb_doctrine_translator' => array(
         'manager' => array(
-            'text_domains' => array(
-                'default',
-            ),
             'source_paths' => array(
                 'module', 'config/autoload'
             ),
