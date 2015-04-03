@@ -1,6 +1,6 @@
 <?php
 
-namespace BsbDoctrineTranslator\Factory;
+namespace BsbDoctrineTranslator\Manager\Factory;
 
 use BsbDoctrineTranslator\Manager\DoctrineTranslator;
 use Zend\ServiceManager\FactoryInterface;
