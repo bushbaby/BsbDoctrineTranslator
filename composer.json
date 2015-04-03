@@ -1,39 +1,51 @@
 {
-    "name": "bushbaby/bsb-doctrine-translator",
-    "description": "BsbDoctrineTranslator is a ZF2 module that provides tools to manage translations stored with doctrine.",
-    "type": "library",
-    "keywords": ["zf2", "translation", "i18n", "module", "doctrine"],
-    "homepage": "https://github.com/bushbaby/BsbDoctrineTranslator",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Bas Kamer",
-            "homepage": "http://bushbaby.nl"
-        }
-    ],
-    "minimum-stability" : "dev",
-    "require": {
-        "php": ">=5.3.3",
-        
-        "zendframework/zend-config": ">=2.2.2",
-        "zendframework/zend-mvc": ">=2.2.2",
-        "zendframework/zend-servicemanager": ">=2.2.2",
-        "zendframework/zend-stdlib": ">=2.2.2",
-        "doctrine/doctrine-orm-module":  ">=0.8",
-        "phpoffice/phpexcel": "1.7.*",
-        "pear/Console_Table": ">=1.1.5",
-        "nikic/php-parser": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "3.8.*"
-    },
-    "autoload": {
-        "files": ["src/functions.php"],
-        "psr-0": {
-            "BsbDoctrineTranslator": "src/"
-        },
-        "classmap": [
-            "./Module.php"
-        ]
+  "name": "bushbaby/bsb-doctrine-translator",
+  "description": "BsbDoctrineTranslator is a ZF2 module that provides tools to manage translations stored with doctrine.",
+  "type": "library",
+  "keywords": [
+    "zf2",
+    "translation",
+    "i18n",
+    "module",
+    "doctrine"
+  ],
+  "homepage": "https://github.com/bushbaby/BsbDoctrineTranslator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bas Kamer",
+      "homepage": "http://bushbaby.nl"
     }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "zendframework/zendframework": "~2.0,>=2.2.2",
+    "bushbaby/bsb-doctrine-translation-loader": ">=1.1",
+    "phpoffice/phpexcel": "~1.7",
+    "pear/Console_Table": ">=1.2",
+    "nikic/php-parser": "~1.0,>=1.2.2"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "~2.0",
+    "phpunit/phpunit": "~4.1"
+  },
+  "autoload": {
+    "files": ["src/functions.php"],
+    "psr-4": {
+      "BsbDoctrineTranslator\\": "src/"
+    },
+    "classmap": [
+      "./Module.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BsbDoctrineTranslatorTest\\": "test/src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
 }

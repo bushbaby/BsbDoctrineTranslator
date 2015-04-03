@@ -12,7 +12,7 @@ Set of tools to manage translation from a doctrine database.
 BsbDoctrineTranslator works with Composer. To install it into your project, just add the following line into your composer.json file:
 
     "require": {
-        "bushbaby/bsb-doctrine-translator": "*"
+        "bushbaby/bsb-doctrine-translator": "~1.0.0@dev"
     }
    
 Then update your project by runnning composer.phar update. 
@@ -76,6 +76,3 @@ Features (some planned)
 - Detect a translation invokation that has moved due to refactoring
 - Detect a change of message refactoring
 - Display the source context of a message
-
-- partial & partialLoop
-- 
