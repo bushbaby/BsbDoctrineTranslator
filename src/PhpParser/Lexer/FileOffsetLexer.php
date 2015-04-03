@@ -10,16 +10,16 @@ class FileOffsetLexer extends PhpParser\Lexer
     /**
      * @var int Position of the cursor within the file
      */
-    private $filePos;
+    private $fileOffsetPos;
 
     /**
      * @inheritdoc
      */
     public function startLexing($code)
     {
-        parent::startLexing($code);
+        $this->fileOffsetPos = 0;
 
-        $this->filePos = 0;
+        parent::startLexing($code);
     }
 
     /**
@@ -36,17 +36,17 @@ class FileOffsetLexer extends PhpParser\Lexer
             $token = $this->tokens[$pos];
 
             if (is_string($token)) {
-                $startAttributes['startPos'] = $this->filePos;
-                $this->filePos += strlen($token);
-                $endAttributes['endPos'] = $this->filePos;
+                $startAttributes['startPos'] = $this->fileOffsetPos;
+                $this->fileOffsetPos += strlen($token);
+                $endAttributes['endPos'] = $this->fileOffsetPos;
 
                 break;
             } else {
-                $startAttributes['startPos'] = $this->filePos;
-                $this->filePos += strlen($token[1]);
+                $startAttributes['startPos'] = $this->fileOffsetPos;
+                $this->fileOffsetPos += strlen($token[1]);
 
                 if (T_COMMENT !== $token[0] && T_DOC_COMMENT !== $token[0] && !isset($this->dropTokens[$token[0]])) {
-                    $endAttributes['endPos'] = $this->filePos;
+                    $endAttributes['endPos'] = $this->fileOffsetPos;
 
                     break;
                 }
